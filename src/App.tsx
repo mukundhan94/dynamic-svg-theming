@@ -1,12 +1,25 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
+import { Icon } from './Icon';
 
 import './style.css';
 
 export const App: FC<{ name: string }> = ({ name }) => {
+  const [state, setState] = useState({
+    main: 'green',
+  });
+
   return (
     <div>
-      <h1>Hello {name}!</h1>
-      <p>Start editing to see some magic happen :) </p>
+      <div className="icons">
+        <Icon name="keys" color={state} />
+        <Icon name="schema" color={state} />
+        <Icon name="keys" color={state} />
+        <Icon name="schema" color={state} />
+      </div>
+      <input
+        value={state.main}
+        onChange={(e) => setState({ ...state, main: e.target.value })}
+      />
     </div>
   );
 };

@@ -2,15 +2,24 @@
   box-sizing: border-box;
 }
 
+html,
 body {
-  margin: 0;
-  padding: 1rem;
-  font-family: system-ui, sans-serif;
-  color: black;
-  background-color: white;
+  height: 100%;
 }
 
-h1 {
-  font-weight: 800;
-  font-size: 1.5rem;
+body {
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Helvetica Neue;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+.icons div {
+  float: left;
 }
